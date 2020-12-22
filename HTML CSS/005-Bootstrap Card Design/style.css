@@ -1,0 +1,41 @@
+.social.fb{
+    color: #3b5998;
+}
+
+.social.tw{
+    color:#55acee;
+}
+
+.social.li{
+    color:#0082ca;
+}
+
+.card-widen.outer{
+    margin-bottom: 2rem;
+}
+
+.card-img-top,.card-widen.outer.card-img-top{
+    width:100%;
+    -o-object-fit:cover;
+    object-fit:cover;
+    border-radius:3px;
+    -webkit-box-shadow:0px 3px 20px 11px rgba(0,0,0,0.349);
+    box-shadow: 0px 3px 20px 11px rgba(0,0,0,0.349);
+}
+
+.card{
+    box-shadow: 0 0 16px 1px rgba(0,0,0,0.2);
+}
+
+.card-widen{
+    border:0px !important;
+}
+
+body{
+    background: #c0c0c0 !important;
+}
+
+.card-widen .outer{
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
