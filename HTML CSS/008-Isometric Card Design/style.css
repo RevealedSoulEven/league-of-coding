@@ -1,0 +1,421 @@
+*,*:before,*:after{
+    border:0;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+:root{
+    font-size: 18px;
+    --cardW:14em;
+    --cardH:8em;
+    --cardZInc:2em;
+}
+
+body{
+    font:1em "Open Sans", sans-serif;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+main{
+    display: block;
+    margin: auto;
+    position: relative;
+    height: calc(var(--cardH)*36-1.5em);
+}
+
+.cards,.stack{
+    transform-style: preserve-3d;
+}
+
+.cards{
+    --scroll:0;
+    display: grid;
+    grid-template: repeat(36,var(--cardH))/var(--cardW);
+    grid-gap: 1.5em;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%)rotateX(45deg)rotateZ(45deg)translateY(var(--scroll));
+}
+
+.stack{
+    display: block;
+    position: relative;
+}
+
+.contents{
+    color:#000;
+    font-size: 0.5em;
+    line-height: 1.25;
+}
+
+.stack:nth-of-type(even) .contents{
+    color:#fff;
+}
+
+.contents h2{
+    color:#aff;
+    font-size: 2em;
+    font-weight:400;
+    margin-bottom: 0.25em;
+}
+
+.contents span{
+    margin-right: 0.75em;
+}
+
+.city{
+    margin-right: 0.75em;
+}
+
+.stack:nth-of-type(4n+2) .card{
+    background-position: 0 100%;
+}
+
+.stack:nth-of-type(4n+3) .card{
+    background-position: 100% 0;
+}
+
+.stack:nth-of-type(4n+4) .card{
+    background-position: 100% 100%;
+}
+
+.stack:nth-of-type(8n+5).card,
+.stack:nth-of-type(8n+6).card,
+.stack:nth-of-type(8n+7).card,
+.stack:nth-of-type(8n+8).card{
+    filter:hue-rotate(90deg);
+    -webkit-filter:hue-rotate(90deg);
+}
+
+.stack:nth-of-type(12n+9).card,
+.stack:nth-of-type(12n+10).card,
+.stack:nth-of-type(12n+11).card,
+.stack:nth-of-type(12n+12).card{
+    filter:hue-rotate(180deg);
+    -webkit-filter:hue-rotate(180deg);
+}
+
+.stack:hover .top, .stack:focus .top{
+    transform: translateZ(calc(var(--cardZInc)*4));
+}
+
+.stack:hover .mid-top, .stack:focus .mid-top{
+    transform: translateZ(calc(var(--cardZInc)*3));
+}
+
+.stack:hover .mid-bottom, .stack:focus .mid-bottom{
+    transform: translateZ(calc(var(--cardZInc)*2));
+}
+
+.stack:hover .bottom, .stack:focus .bottom{
+    transform: translateZ(calc(var(--cardZInc)));
+}
+
+.stack:hover .shadow,.stack:focus .shadow{
+    filter:blur(5px);
+    -webkit-filter:blur(5px);
+    opacity: 0.2;
+}
+
+.card{
+    background-image: url(https://i.postimg.cc/Vspg0Nn2/business-card-backgrounds.png);
+    background-size: 200% 200%;
+    box-shadow: -1px -1px 0 rgba(0,0,0,0.2) inset;
+    color: #000;
+    padding: 0.75em;
+    position: absolute;
+    transition: all 0.3s;
+    widows: 100%;
+    height: 100%;
+}
+
+.top{
+    transform: translateZ(4px);
+    z-index: 4;
+}
+
+.mid-top{
+    transform: translateZ(3px);
+    z-index: 3;
+}
+
+.mid-bottom{
+    transform: translateZ(2px);
+    z-index: 2;
+}
+
+.bottom{
+    transform: translateZ(1px);
+    z-index: 1;
+}
+
+.shadow{
+    background: #000;
+    filter:blur(2px);
+    -webkit-filter:blur(2px);
+    opacity: 0.4;
+}
+
+@media screen and (min-width:361px){
+    main{
+        height: calc(var(--cardH)*18-1.5em);
+    }
+    .cards{
+        grid-template: repeat(18,var(--cardH))/repeat(2,var(--cardW));
+    }
+}
+
+@media screen and (min-width:641px){
+    main{
+        height: calc(var(--cardH)*12-1.5em);
+    }
+    .cards{
+        grid-template: repeat(12,var(--cardH))/repeat(3,var(--cardW));
+    }
+}
+
+@media screen and (min-width:961px){
+    main{
+        height: calc(var(--cardH)*9-1.5em);
+    }
+    .cards{
+        grid-template: repeat(9,var(--cardH))/repeat(4,var(--cardW));
+    }
+}
+
+@media screen and (min-width:1281px){
+    main{
+        height: calc(var(--cardH)*8-1.5em);
+    }
+    .cards{
+        grid-template: repeat(8,var(--cardH))/repeat(5,var(--cardW));
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
